@@ -16,7 +16,8 @@ void ofxBNO055USBStick::setup(){
 	cam.setFarClip(1000.f);
 	cam.setDistance(1.f);
 	light.setParent(cam);
-
+	cylinder.set(0.01f, 0.5f);
+	
 	// gui settings
 	gui.setup("bno055");
 	gui.add(acceleration.set("acceleration", ofVec3f(), ofVec3f(-100.f), ofVec3f(100.f)));
@@ -58,6 +59,16 @@ void ofxBNO055USBStick::draw(){
 	ofPushStyle();
 	ofSetColor(ofColor::white, 200);
 	box.draw();
+	
+	ofQuaternion quat;
+	quat.makeRotate(ofVec3f(0.f, 1.f, 0.f), output.gravity_vector);
+	mat.setRotate(quat);
+	ofMultMatrix(mat);
+	ofPushStyle();
+	ofSetColor(ofColor::yellow);
+	cylinder.draw();
+	ofPopStyle();
+	
 	ofPopStyle();
 	ofPopMatrix();
 	cam.end();
