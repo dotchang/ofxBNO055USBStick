@@ -15,3 +15,5 @@ library path: C:\boost_1_63_0\lib\x86 or C:\boost_1_63_0\lib\x64
 ## Default settings
 COM3
 115200bps
+
+![ofxBNO055USBStickExample]https://github.com/dotchang/ofxBNO055USBStick/blob/master/ofxBNO055.png
