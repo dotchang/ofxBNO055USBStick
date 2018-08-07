@@ -59,6 +59,7 @@ void ofxBNO055USBStick::draw(){
 	ofPushStyle();
 	ofSetColor(ofColor::white, 200);
 	box.draw();
+	ofPopStyle();
 	
 	ofQuaternion quat;
 	quat.makeRotate(ofVec3f(0.f, 1.f, 0.f), output.gravity_vector);
@@ -68,8 +69,7 @@ void ofxBNO055USBStick::draw(){
 	ofSetColor(ofColor::yellow);
 	cylinder.draw();
 	ofPopStyle();
-	
-	ofPopStyle();
+
 	ofPopMatrix();
 	cam.end();
 
