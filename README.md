@@ -2,7 +2,7 @@
 This is a fork of https://github.com/yoshito-n-students/bno055_usb_stick for openFrameworks addon.
 
 ## What's BNO055USBStick?
-BNO055 is an 9DOF(+temperature) IMU Sensor by Bosch Sensortec.
+BNO055 is a 9DOF(+temperature) IMU Sensor by Bosch Sensortec.
 BNO055 USB-Stick ia an evaluation board for the bno055.
 https://www.digikey.jp/product-detail/ja/bosch-sensortec/BNO055-USB-STICK/828-1045-ND/6136288
 
