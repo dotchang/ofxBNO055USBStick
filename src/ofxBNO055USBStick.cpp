@@ -21,7 +21,7 @@ void ofxBNO055USBStick::setup(){
 	// gui settings
 	gui.setup("bno055");
 	gui.add(acceleration.set("acceleration", ofVec3f(), ofVec3f(-100.f), ofVec3f(100.f)));
-	gui.add(magnetometer.set("magnetometer", ofVec3f(), ofVec3f(-1000.f), ofVec3f(1000.f)));
+	gui.add(magnetometer.set("magnetometer", ofVec3f(), ofVec3f(-2000.f), ofVec3f(2000.f)));
 	gui.add(gyroscope.set("gyroscope", ofVec3f(), ofVec3f(-100.f), ofVec3f(100.f)));
 	gui.add(euler_angles.set("euler_angles", ofVec3f(), ofVec3f(-10.f), ofVec3f(10.f)));
 	gui.add(temperature.set("temperature", 0., -100., 100.));
