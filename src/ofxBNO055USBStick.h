@@ -57,7 +57,8 @@ class ofxBNO055USBStick {
 		ofEasyCam cam;
 		ofLight light;
 		ofBoxPrimitive box;
-
+		ofCylinderPrimitive cylinder;
+	
 		ofxPanel gui;
 		ofParameter<ofVec3f> acceleration;
 		ofParameter<ofVec3f> magnetometer;
