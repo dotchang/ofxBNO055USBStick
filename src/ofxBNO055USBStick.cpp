@@ -20,9 +20,9 @@ void ofxBNO055USBStick::setup(){
 	
 	// gui settings
 	gui.setup("BNO055 USB-Stick");
-	gui.add(acceleration.set("acceleration [m/s^2]", ofVec3f(), ofVec3f(-100.f), ofVec3f(100.f)));
+	gui.add(acceleration.set("acceleration [m/s^2]", ofVec3f(), ofVec3f(-40.f), ofVec3f(40.f)));
 	gui.add(magnetometer.set("magnetometer [uT]", ofVec3f(), ofVec3f(-2048.f), ofVec3f(2048.f)));
-	gui.add(gyroscope.set("gyroscope [rad/sec]", ofVec3f(), ofVec3f(-100.f), ofVec3f(100.f)));
+	gui.add(gyroscope.set("gyroscope [dps]", ofVec3f(), ofVec3f(-2000.f), ofVec3f(2000.f)));
 	gui.add(euler_angles.set("euler_angles [deg.]", ofVec3f(), ofVec3f(0.f, -90.f, -180.f), ofVec3f(360.f, 90.f, 180.f)));
 	gui.add(temperature.set("temperature [C]", 0., -100., 100.));
 	gui.add(calibration_status.set("calibration_status", ofVec4f(), ofVec4f(0), ofVec4f(3)));
@@ -34,8 +34,8 @@ void ofxBNO055USBStick::update(){
 
 	acceleration = output.acceleration;
 	magnetometer = output.magnetometer;
-	gyroscope = output.gyroscope;
-	euler_angles = output.euler_angles * 180.0f / PI;
+	gyroscope = output.gyroscope * 180.f / PI;
+	euler_angles = output.euler_angles * 180.f / PI;
 	quaternion = output.quaternion;
 	linear_acceleration = output.linear_acceleration;
 	gravity_vector = output.gravity_vector;
